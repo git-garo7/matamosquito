@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+	<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"><!--INCLUSÃO DO BOOTSTRAP-->
+<link rel="stylesheet" type="text/css" href="estilo.css">
+<script>
+	function iniciarjogo(){
+		//alert(document.getElementById('nível').value)//recupera opção selecionada entre Normal/Difícil e Hardcore//só que se não selecionar nenhum retorna nada no alert.
+		var nivel = document.getElementById('nivel').value
+		if (nivel=== '') {
+			alert('selecione um nível para iniciar o jogo')
+			return false 
+		}//mais adequado que o anterior,ao não selecionar nível ele  retorna uma mensagem de aviso.
+		window.location.href = "app.html?" + nivel
+	}
+</script>
+</head>
+<body>
+	<div class="container" >
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center"><!--conteúdo justificado no centro-->
+				<img src="imagens/game.png">
+                </div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center"><!--centraliza opções-->
+		
+			<div class="mb-2" >
+			<select class="form-control" id="nivel" ><!--formulário de nível-->
+				<option value="" >--Selecione o nível--</option>
+				<option value="Normal" >Normal</option>
+				<option value="Dificil" >Dificil</option>
+				<option value="Hardcore" >Hardcore</option>
+			</select>
+		 </div>		
+	</div>
+    </div>
+    </div>
+
+			<div class="col">
+				<div class="d-flex justify-content-center"><!--conteúdo justificado no centro-->
+				<button type="button" class="btn btn-danger btn-lg" onclick="iniciarjogo()" >INICIAR O JOGO</button>
+                </div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

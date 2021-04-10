@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script src="jogo.js">
+		
+	</script>
+
+	<title>
+		
+	</title>
+
+</head>
+<div class="painel" >
+	<div class="vidas" >
+		<img id="c1" src="imagens/coracao_cheio.png">
+		<img id="c2" src="imagens/coracao_cheio.png">
+		<img id="c3" src="imagens/coracao_cheio.png">
+		
+	</div>
+	<div class="cronometro" >tempo restante: <span id="cronometro" ></span> </div>
+</div>
+<body onresize="ajustaresolucaojogo()">
+    <script>
+    	document.getElementById('cronometro').innerHTML = tempo
+		
+		 var criamosquito = setInterval(function(){
+			posicaorandom()
+		},tempom)//chama a criação HTML  que representa o MOSQUITO(img)a cada um segundo//
+	</script>
+</body>
+
+</html>
